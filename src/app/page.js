@@ -1,10 +1,16 @@
 "use client";
 
 import { useState } from "react";
+import { FaEye, FaEyeSlash } from "react-icons/fa"; // Import eye icons from react-icons
 
 export default function Home() {
   const [isUsernameFocused, setIsUsernameFocused] = useState(false);
   const [isPasswordFocused, setIsPasswordFocused] = useState(false);
+  const [showPassword, setShowPassword] = useState(false); // State to manage password visibility
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
 
   return (
     <div>
@@ -31,10 +37,11 @@ export default function Home() {
           />
           <label
             htmlFor="username"
-            className={`absolute left-2 transition-all duration-300 ${isUsernameFocused
+            className={`absolute left-2 transition-all duration-300 ${
+              isUsernameFocused
                 ? "top-2 text-xs text-black-500"
                 : "top-4 text-sm text-black-400"
-              }`}
+            }`}
           >
             Username*
           </label>
@@ -45,20 +52,28 @@ export default function Home() {
           <input
             id="password"
             className="mb-[20px] block w-full p-2 pt-5 border border-gray-300 rounded bg-[#eff3f6] border-none outline-none"
-            type="password"
+            type={showPassword ? "text" : "password"} // Toggle between text and password type
             onFocus={() => setIsPasswordFocused(true)}
             onBlur={(e) => !e.target.value && setIsPasswordFocused(false)}
             placeholder=" "
           />
           <label
             htmlFor="password"
-            className={`absolute left-2 transition-all duration-300 ${isPasswordFocused
+            className={`absolute left-2 transition-all duration-300 ${
+              isPasswordFocused
                 ? "top-2 text-xs text-black-500"
                 : "top-4 text-sm text-black-400"
-              }`}
+            }`}
           >
             Password*
           </label>
+          {/* Eye Icon */}
+          <div
+            className="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer"
+            onClick={togglePasswordVisibility}
+          >
+            {showPassword ? <FaEyeSlash /> : <FaEye />}
+          </div>
         </div>
 
         {/* Login Button */}
