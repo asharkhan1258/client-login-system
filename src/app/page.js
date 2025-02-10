@@ -22,7 +22,7 @@ export default function Home() {
       {/* Login Form Container */}
       <div className="w-full px-4 sm:w-[400px] md:w-[480px] lg:w-[512px] m-auto">
         {/* Login Title */}
-        <p className="mb-[20px] font-bold self-center text-[#141414] block flex-[0_1] font-helvetica text-[24px] sm:text-[28px] md:text-[32px] font-normal font-bold tracking-[.05em] leading-[37px] relative text-center">
+        <p className="mb-[20px] font-black self-center text-[#141414] block flex-[0_1] font-helvetica text-[24px] sm:text-[28px] md:text-[32px] font-normal font-bold tracking-[.05em] leading-[37px] relative text-center">
           Login
         </p>
 
@@ -77,7 +77,7 @@ export default function Home() {
         </div>
 
         {/* Login Button */}
-        <button className="mb-[20px] w-full bg-[#00818d] text-white py-4 px-4 rounded hover:bg-[#008390] transition duration-300">
+        <button className="mb-[20px] w-full font-bold bg-[#0071bc] text-white py-4 px-4 rounded hover:bg-[#0071bc] transition duration-300">
           Login
         </button>
 
@@ -88,8 +88,8 @@ export default function Home() {
 
         {/* Sign Up Section */}
         <p className="text-left mt-4 text-base sm:text-lg">Don’t have an account?</p>
-        <button className="mb-[30px] w-full bg-[transparent] border border-[#00818d] hover:text-[white] text-[#00818d] py-4 px-4 rounded mt-2 hover:bg-[#00818d] transition duration-300">
-          Sign Up
+        <button className="mb-[30px] font-bold w-full bg-[transparent] border border-[#00818d] hover:text-[white] text-[#00818d] py-4 px-4 rounded mt-2 hover:bg-[#00818d] transition duration-300">
+         Register
         </button>
 
         {/* Mobile App Section */}
