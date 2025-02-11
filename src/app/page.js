@@ -88,7 +88,7 @@ export default function Home() {
 
         {/* Sign Up Section */}
         <p className="text-left mt-4 text-base sm:text-lg">Don’t have an acnt?</p>
-        <button className="mb-[30px] font-bold w-full bg-[transparent] border border-[#0071bc] hover:text-[white] text-[#00818d] py-4 px-4 rounded mt-2 hover:bg-[#0071bc] transition duration-300">
+        <button className="mb-[30px] font-bold w-full bg-[transparent] border border-[#0071bc] hover:text-white text-[#00818d] py-4 px-4 rounded mt-2 hover:bg-[#0071bc] transition duration-300">
          Register
         </button>
 
